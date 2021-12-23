@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simplexe</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css">
+    <link  rel="stylesheet" type="text/css"href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+</head>
+<body style="margin: 20px; font-family: Arial, Helvetica, sans-serif;">
+    <hr>
+    <h1 style="text-align: center; padding: 20px;">TP sur l'algorithme du Branch & Bound</h1>
+    <p style="text-align: center;">Auteurs: Jean-Daniel KÜENZI & Ottavio BUONOMO</p>
+    <hr>
+    <h3>Choix de la variable fractionaire</h3>
+    <select id="varFracChoice">
+        <option value="0">La plus petite valeur</option>
+        <option value="1">La plus grande valeur</option>
+    </select>
+    <h3>Orde d'insertion des noeuds</h3>
+    <select id="plOrder">
+        <option value="0">Les PL- d'abord</option>
+        <option value="1">Les PL+ d'abord</option>
+    </select>
+    <h3>Sélectioner un fichier</h3>
+    <input type="file" name="fileToUpload" id="fileToUpload" onchange="loadFile()">
+    <hr>
+    <div style="font-size: 14pt;">
+        <h2>Résultats du Branch & Bound du problème donné</h2>
+        <p id="BBnombresIterationsFinal"></p>
+        <p id="BBdominateNodeFinal"></p>
+        <p id="BBmaxNodeDepthFinal"></p>
+        <p>Recettes produites avec la quantité : </p>
+        <ul id="BBrecettesFinal"></ul>
+        <p id="BBoptimumFinal"></p>
+        <p id="BBdureeFinal"></p>
+    </div>
+    <hr>
+    <h1 style="text-align: center; padding: 20px;">TP sur l'algorithme du Simplexe</h1>
+    <hr>
+    <div style="font-size: 14pt;">
+        <h2>Résultats du simplexe avec 20 variables et 11 contraintes</h2>
+        <p id="nombresIterations1"></p>
+        <p>Recettes produites avec la quantité : </p>
+        <ul id="recettes1"></ul>
+        <p id="optimum1"></p>
+        <p id="duree1"></p>
+    </div>
+    <br>
+    <div style="font-size: 14pt;">
+        <h2>Résultats du simplexe avec 16 vriables et 15 contraintes</h2>
+        <p id="nombresIterations2"></p>
+        <p>Recettes produites avec la quantité : </p>
+        <ul id="recettes2"></ul>
+        <p id="optimum2"></p>
+        <p id="duree2"></p>
+    </div>
+    <br>
+    <div style="font-size: 14pt;">
+        <h2>Résultats du simplexe du problème donné</h2>
+        <p id="nombresIterationsFinal"></p>
+        <p>Recettes produites avec la quantité : </p>
+        <ul id="recettesFinal"></ul>
+        <p id="optimumFinal"></p>
+        <p id="dureeFinal"></p>
+    </div>
+    <hr>
+    <h2>Graphiques - variables / contraintes / itérations</h2>
+    <div style="width: 100%; display: inline-block;">
+        <div style="width: 400px; height: 400px; display: inline-block;">
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+        <div style="width: 400px; height: 400px; display: inline-block; margin-left: 30px;">
+            <canvas id="myChart2" width="400" height="400"></canvas>
+        </div>
+        <div style="width: 400px; height: 400px; display: inline-block; margin-left: 30px;">
+            <canvas id="myChart3" width="400" height="400"></canvas>
+        </div>
+    </div>
+</body>
+<footer></footer>
+<script src="res/data.js"></script>
+<script src="res/dataModifieContr.js"></script>
+<script src="res/dataModifieVars.js"></script>
+<script src="js/readFile.js"></script>
+<script src="js/simplexe.js"></script>
+<script src="js/graphiques.js"></script>
+</html>
