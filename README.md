@@ -7,4 +7,5 @@ This project was made during my B.Sc. at the *Haute école du paysage, d’ingé
 # Author
 
 Jean-Daniel Küenzi - jeandanielkuenzi@gmail.com
+
 Ottavio Buonomo
